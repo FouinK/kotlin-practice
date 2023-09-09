@@ -8,6 +8,6 @@ class FirstKotlinApplicationTests {
 	@Test
 	fun contextLoads() {
 		val str: String? = null
-		println(str?.length ?: 0)
+		println(str!!.length)
 	}
 }
