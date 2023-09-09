@@ -8,6 +8,7 @@ class FirstKotlinApplicationTests {
 
 	@Test
 	fun contextLoads() {
+		println("성현")
 	}
 
 }
