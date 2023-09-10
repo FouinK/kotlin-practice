@@ -9,16 +9,15 @@ import java.util.IllegalFormatException
 class FirstKotlinApplicationTests {
 	@Test
 	fun contextLoads() {
-		println(testFor(1000))
+		println(getGradeWithSwitch(1000))
 	}
 
-	fun testFor(score: Int): Boolean {
-		if (score !in 0..100) {
-			return false
-		} else if (score in 0..100) {
-			return true
-		} else {
-			throw IllegalArgumentException("스코어의 범위를 특정할 수 없습니다")
+
+	fun getGradeWithSwitch(score: Int): String {
+		return when (score / 10) {
+			9 -> "A"
+			in 7..8 -> "B"
+			else -> "C"
 		}
 	}
 }
