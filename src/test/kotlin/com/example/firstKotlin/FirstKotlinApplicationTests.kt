@@ -11,7 +11,7 @@ class FirstKotlinApplicationTests {
 		val name = "윤성현"
 
 		println("person.name = ${person.name}")
-		println("name = $name")
+		println("name = ${name}")
 	}
 
 	 class Person {
