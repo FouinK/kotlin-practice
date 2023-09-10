@@ -7,15 +7,10 @@ import org.springframework.boot.test.context.SpringBootTest
 class FirstKotlinApplicationTests {
 	@Test
 	fun contextLoads() {
-		val name = "윤성현"
+		val str = "성현윤"
+		println("${str[0]}")
+		println(str[0])
 
-		val trimIndent = """
-			${name}
-			나이는
-			몇살 ?
-		""".trimIndent()
-
-		println("trimIndent = ${trimIndent}")
 
 	}
 
