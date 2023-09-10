@@ -7,18 +7,34 @@ import org.springframework.boot.test.context.SpringBootTest
 class FirstKotlinApplicationTests {
 	@Test
 	fun contextLoads() {
-		val str = "성현윤"
-		println("${str[0]}")
-		println(str[0])
+		val money = JavaMoney(1000)
+		val money1 = money
+		val money2 = JavaMoney(1000)
 
-
+		println(money === money1)
+		println(money == money1)
+		println(money === money2)
+		println(money == money2)
 	}
 
-	 class Person {
-		 var name: String
+	class JavaMoney {
+		var amount: Int
 
-		 constructor(name: String) {
-			 this.name = name
-		 }
-	 }
+		constructor(money: Int) {
+			this.amount = money
+		}
+
+		override fun equals(other: Any?): Boolean {
+			if (this === other) return true
+			if (javaClass != other?.javaClass) return false
+
+			other as JavaMoney
+
+			return amount == other.amount
+		}
+
+		override fun hashCode(): Int {
+			return amount
+		}
+	}
 }
