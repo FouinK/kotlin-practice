@@ -9,7 +9,6 @@ class FirstKotlinApplicationTests {
 	fun contextLoads() {
 		val arrays = arrayOf("a", "b", "c")
 		printNameAndGender(*arrays)
-
 		printNameAndGender("a", "b", "c")
 	}
 
