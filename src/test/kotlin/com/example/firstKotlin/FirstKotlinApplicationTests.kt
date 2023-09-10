@@ -10,11 +10,11 @@ class FirstKotlinApplicationTests {
 		println(parseIntException("10"))
 	}
 
-	fun parseIntException(str: String): Int {
-		try {
-			return str.toInt()
+	fun parseIntException(str: String): Int? {
+		return try {
+			str.toInt()
 		} catch (e: NumberFormatException) {
-			throw IllegalArgumentException("숫자가 아닙니다")
+			null
 		}
 	}
 
