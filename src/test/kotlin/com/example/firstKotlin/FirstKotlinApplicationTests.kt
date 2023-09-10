@@ -7,16 +7,22 @@ import org.springframework.boot.test.context.SpringBootTest
 class FirstKotlinApplicationTests {
 	@Test
 	fun contextLoads() {
-		println(getGradeWithSwitch(1))
-	}
+		val numbers = listOf(1, 2, 3)
+		for (number in numbers) {
+			println("number = ${number}")
+		}
 
+		for (i in 1..3) {
+			println(i)
+		}
 
-	fun getGradeWithSwitch(number: Int): String {
-		return when {
-			number == 0 -> "0입니다."
-			number % 2 == 0 -> "짝수입니다"
-			number % 2 != 0 -> "홀수 입니다"
-			else -> "홀수입니니다 22"
+		for (i in 3 downTo 1) {
+			println(i)
+		}
+
+		for (i in 1..5 step 2) {
+			println(i)
 		}
 	}
+
 }
