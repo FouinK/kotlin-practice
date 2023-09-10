@@ -12,9 +12,11 @@ class FirstKotlinApplicationTests {
 
 
 	fun getGradeWithSwitch(number: Int): String {
-		return when (number) {
-			-1, 0, 1 -> "어디서 많이 본 숫자입니다"
-			else -> "-1, 0, 1이 아닙니다"
+		return when {
+			number == 0 -> "0입니다."
+			number % 2 == 0 -> "짝수입니다"
+			number % 2 != 0 -> "홀수 입니다"
+			else -> "홀수입니니다 22"
 		}
 	}
 }
