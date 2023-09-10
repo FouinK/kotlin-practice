@@ -10,12 +10,9 @@ import java.io.FileReader
 class FirstKotlinApplicationTests {
 	@Test
 	fun contextLoads() {
-		val currentFile = File(".")
-		val file = File(currentFile.absolutePath + "/a.txt")
-		val reader = BufferedReader(FileReader(file))
-		println(reader.readLine())
-		reader.close()
+		println(max(1, 2))
 	}
 
+	fun max(a: Int, b: Int) = if (a > b) a else b
 
 }
