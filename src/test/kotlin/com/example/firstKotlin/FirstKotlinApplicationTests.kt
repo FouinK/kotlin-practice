@@ -8,21 +8,10 @@ class FirstKotlinApplicationTests {
 	@Test
 	fun contextLoads() {
 		val person = Person("성현")
-		printAgeIfPerson(person)
-	}
+		val name = "윤성현"
 
-	fun printAgeIfPerson(obj: Any?) {
-		val person = obj as? Person
-		println(person?.name)
-
-		if (obj is Person) {
-			val person1 = obj as Person
-			println(person1.name)
-		}
-
-		if (obj is Person) {
-			println(obj.name)
-		}
+		println("person.name = ${person.name}")
+		println("name = $name")
 	}
 
 	 class Person {
