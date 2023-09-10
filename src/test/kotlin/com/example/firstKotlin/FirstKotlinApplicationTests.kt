@@ -2,17 +2,22 @@ package com.example.firstKotlin
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest
-import java.io.BufferedReader
-import java.io.File
-import java.io.FileReader
 
 @SpringBootTest
 class FirstKotlinApplicationTests {
 	@Test
 	fun contextLoads() {
-		println(max(1, 2))
+		println(repeat("Hello"))
 	}
 
-	fun max(a: Int, b: Int) = if (a > b) a else b
+	fun repeat(str: String, num: Int = 3, useNewLine: Boolean = true) {
+		for (i in 1..num) {
+			if (useNewLine) {
+				println(str)
+			} else {
+				print(str)
+			}
+		}
+	}
 
 }
