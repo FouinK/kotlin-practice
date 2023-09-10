@@ -7,17 +7,12 @@ import org.springframework.boot.test.context.SpringBootTest
 class FirstKotlinApplicationTests {
 	@Test
 	fun contextLoads() {
-		println(repeat("Hello", useNewLine = false))
+		println(printNameAndGender(name = "윤성현", gender = "남자"))
 	}
 
-	fun repeat(str: String, num: Int = 3, useNewLine: Boolean = true) {
-		for (i in 1..num) {
-			if (useNewLine) {
-				println(str)
-			} else {
-				print(str)
-			}
-		}
+	fun printNameAndGender(name: String, gender: String) {
+		println(name)
+		println(gender)
 	}
 
 }
