@@ -7,7 +7,7 @@ import org.springframework.boot.test.context.SpringBootTest
 class FirstKotlinApplicationTests {
 	@Test
 	fun contextLoads() {
-		println(repeat("Hello"))
+		println(repeat("Hello", useNewLine = false))
 	}
 
 	fun repeat(str: String, num: Int = 3, useNewLine: Boolean = true) {
