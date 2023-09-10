@@ -8,13 +8,9 @@ class FirstKotlinApplicationTests {
 	@Test
 	fun contextLoads() {
 		val money = JavaMoney(1000)
-		val money1 = money
 		val money2 = JavaMoney(1000)
 
-		println(money === money1)
-		println(money == money1)
-		println(money === money2)
-		println(money == money2)
+		println(money + money2)
 	}
 
 	class JavaMoney {
@@ -36,5 +32,11 @@ class FirstKotlinApplicationTests {
 		override fun hashCode(): Int {
 			return amount
 		}
+
+		operator fun plus(other: JavaMoney): Int {
+			return this.amount + other.amount
+		}
+
+
 	}
 }
