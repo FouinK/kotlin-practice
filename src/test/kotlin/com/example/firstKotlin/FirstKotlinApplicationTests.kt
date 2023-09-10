@@ -7,21 +7,14 @@ import org.springframework.boot.test.context.SpringBootTest
 class FirstKotlinApplicationTests {
 	@Test
 	fun contextLoads() {
-		val numbers = listOf(1, 2, 3)
-		for (number in numbers) {
-			println("number = ${number}")
-		}
+		println(parseIntException("10"))
+	}
 
-		for (i in 1..3) {
-			println(i)
-		}
-
-		for (i in 3 downTo 1) {
-			println(i)
-		}
-
-		for (i in 1..5 step 2) {
-			println(i)
+	fun parseIntException(str: String): Int {
+		try {
+			return str.toInt()
+		} catch (e: NumberFormatException) {
+			throw IllegalArgumentException("숫자가 아닙니다")
 		}
 	}
 
