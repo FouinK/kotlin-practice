@@ -7,36 +7,14 @@ import org.springframework.boot.test.context.SpringBootTest
 class FirstKotlinApplicationTests {
 	@Test
 	fun contextLoads() {
-		val money = JavaMoney(1000)
-		val money2 = JavaMoney(1000)
-
-		println(money + money2)
+		println(myif(null))
 	}
 
-	class JavaMoney {
-		var amount: Int
-
-		constructor(money: Int) {
-			this.amount = money
+	fun myif(str: String?): String {
+		return if (str == "A") {
+			"A"
+		} else {
+			"B"
 		}
-
-		override fun equals(other: Any?): Boolean {
-			if (this === other) return true
-			if (javaClass != other?.javaClass) return false
-
-			other as JavaMoney
-
-			return amount == other.amount
-		}
-
-		override fun hashCode(): Int {
-			return amount
-		}
-
-		operator fun plus(other: JavaMoney): Int {
-			return this.amount + other.amount
-		}
-
-
 	}
 }
