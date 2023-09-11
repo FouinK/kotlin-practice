@@ -9,5 +9,8 @@ class FirstKotlinApplication
 fun main(args: Array<String>) {
 	val person = Person()
 
+	println("person.name = ${person.name}")
+	println("person.age = ${person.age}")
+
 	runApplication<FirstKotlinApplication>(*args)
 }

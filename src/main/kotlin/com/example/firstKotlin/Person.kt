@@ -3,8 +3,8 @@ package com.example.firstKotlin
 import java.lang.IllegalArgumentException
 
 class Person(
-    val name: String,
-    var age: Int
+    val name: String = "윤성현",
+    var age: Int = 1
 ) {
     init {
         if (age <= 0) {
@@ -13,13 +13,10 @@ class Person(
         println("초기화 블록")
     }
 
-    constructor(name: String) : this(name, 1) {
-        println("첫번째 부 생성자")
+    fun isAdult1(): Boolean {
+        return this.age >= 20
     }
 
-
-    constructor() : this("홍길동") {
-        println("두번째 부 생성자")
-    }
-
+    val isAdult2: Boolean
+        get() = this.age >= 20
 }
