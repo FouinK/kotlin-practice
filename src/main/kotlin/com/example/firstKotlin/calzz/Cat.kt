@@ -1,4 +1,4 @@
-package com.example.firstKotlin
+package com.example.firstKotlin.calzz
 
 class Cat (
     spe: String

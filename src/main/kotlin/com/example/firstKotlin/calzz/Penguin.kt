@@ -1,4 +1,7 @@
-package com.example.firstKotlin
+package com.example.firstKotlin.calzz
+
+import com.example.firstKotlin.interfac.Flyable
+import com.example.firstKotlin.interfac.Swimable
 
 class Penguin(
     spe: String

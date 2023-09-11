@@ -1,4 +1,4 @@
-package com.example.firstKotlin
+package com.example.firstKotlin.interfac
 
 interface Swimable {
     fun act() {

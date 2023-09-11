@@ -1,4 +1,4 @@
-package com.example.firstKotlin
+package com.example.firstKotlin.interfac
 
 interface Flyable {
     fun act() {

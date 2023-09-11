@@ -1,4 +1,4 @@
-package com.example.firstKotlin
+package com.example.firstKotlin.calzz
 
 import java.lang.IllegalArgumentException
 

@@ -1,4 +1,4 @@
-package com.example.firstKotlin
+package com.example.firstKotlin.calzz
 
 abstract class Animal (
     protected val spe: String,
