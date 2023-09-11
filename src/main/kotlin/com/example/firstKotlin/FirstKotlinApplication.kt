@@ -7,5 +7,11 @@ import org.springframework.boot.runApplication
 class FirstKotlinApplication
 
 fun main(args: Array<String>) {
+	val person = Person("윤성현", 25)
+	println(person.name)
+	person.age = 10
+
+	println(person.age)
+
 	runApplication<FirstKotlinApplication>(*args)
 }
