@@ -1,9 +1,7 @@
 package com.example.firstKotlin
 
-import com.example.firstKotlin.calzz.Derived
-import com.example.firstKotlin.calzz.People
-import com.example.firstKotlin.calzz.Person
-import com.example.firstKotlin.calzz.Singleton
+import com.example.firstKotlin.calzz.*
+import com.example.firstKotlin.enums.Country
 import com.example.firstKotlin.interfac.Movable
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
@@ -34,10 +32,26 @@ fun main(args: Array<String>) {
 
 	})
 
+	val dto1 = PersonDto("윤성현", 100)
+	val dto2 = PersonDto("윤성현1", 200)
+
+	println(dto1 == dto2)
+
+	println("dto1 = ${dto1}")
+
+	handleCountry(Country.AMERICA)
+
 	runApplication<FirstKotlinApplication>(*args)
 }
 
 private fun moveSomething(movable: Movable) {
 	movable.move()
 	movable.fly()
+}
+
+fun handleCountry(country: Country) {
+	when (country) {
+		Country.KOREA -> TODO()
+		Country.AMERICA -> TODO()
+	}
 }
