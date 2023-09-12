@@ -25,9 +25,7 @@ class FirstKotlinApplicationTests {
 			return person.name == "성현"
 		}
 
-
-		filterPerson(people, {person -> person.name == "현성"})		//얘네 둘다 동일한거임
-		filterPerson(people) { person -> person.name == "현성" }		//얘네 둘다 동일한거임
+		println(filterPerson(people) { it.name == "현성" })
 	}
 
 	private fun filterPerson(
