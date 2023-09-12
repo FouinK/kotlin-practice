@@ -7,17 +7,13 @@ import org.springframework.boot.test.context.SpringBootTest
 class FirstKotlinApplicationTests {
 	@Test
 	fun contextLoads() {
-		val numbers = mutableListOf(100, 200)
+		val set = setOf(100, 100)
 
-		numbers.add(300)
-
-		println("numbers[2] = ${numbers[2]}")
-
-		for (number in numbers) {
-			println(number)
+		for (i in set) {
+			println("${i}")
 		}
 
-		for ((idx, value) in numbers.withIndex()) {
+		for ((idx, value) in set.withIndex()) {
 			println("${idx} ${value}")
 		}
 	}
