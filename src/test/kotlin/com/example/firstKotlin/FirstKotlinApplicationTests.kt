@@ -7,13 +7,32 @@ import org.springframework.boot.test.context.SpringBootTest
 class FirstKotlinApplicationTests {
 	@Test
 	fun contextLoads() {
-		val str = "ABC"
+		val people = mutableListOf(
+			Person("성현", 10),
+			Person("성현", 10),
+			Person("윤성현", 10),
+			Person("윤성현", 10),
+			Person("윤성현", 10),
+			Person("윤성현", 10),
+			Person("현성", 10),
+			Person("현성", 10),
+			Person("현성", 10),
+			Person("현성", 10),
+			Person("현성", 10)
+		)
 
-		println(str.lastChar())
-	}
+		val isSung = fun(person: Person): Boolean {
+			return person.name == "성현"
+		}
 
+		val isHyun = {person: Person -> person.name == "현성"}
 
-	fun String.lastChar(): Char {
-		return this[this.length - 1]
+		println(isSung(people[0]))
+		println(isHyun.invoke(people[6]))
 	}
 }
+
+data class Person (
+	var name: String,
+	var age: Int,
+)
