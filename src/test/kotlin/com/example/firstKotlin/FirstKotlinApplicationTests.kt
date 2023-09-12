@@ -7,9 +7,14 @@ import org.springframework.boot.test.context.SpringBootTest
 class FirstKotlinApplicationTests {
 	@Test
 	fun contextLoads() {
-		val arrays = arrayOf("a", "b", "c")
-		printNameAndGender(*arrays)
-		printNameAndGender("a", "b", "c")
+		val numbers = listOf(100, 200)
+		val emptyList = emptyList<Int>()
+
+		printNumbers(emptyList())
+	}
+
+	private fun printNumbers(numbers: List<Int>) {
+
 	}
 
 	fun printNameAndGender(vararg strings: String) {

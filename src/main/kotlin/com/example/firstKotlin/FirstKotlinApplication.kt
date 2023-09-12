@@ -41,7 +41,7 @@ fun main(args: Array<String>) {
 
 	handleCountry(Country.AMERICA)
 
-	runApplication<FirstKotlinApplication>(*args)
+//	runApplication<FirstKotlinApplication>(*args)
 }
 
 private fun moveSomething(movable: Movable) {
