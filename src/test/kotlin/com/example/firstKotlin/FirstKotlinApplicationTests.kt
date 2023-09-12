@@ -29,6 +29,22 @@ class FirstKotlinApplicationTests {
 
 		println(isSung(people[0]))
 		println(isHyun.invoke(people[6]))
+
+		val filterPerson = filterPerson(people, isSung)
+	}
+
+	private fun filterPerson(
+		personList: List<Person>,
+		filter: (Person) -> Boolean): List<Person> {
+
+		val result = mutableListOf<Person>()
+		for (person in personList) {
+			if (filter(person)) {
+				result.add(person)
+			}
+		}
+
+		return result
 	}
 }
 
