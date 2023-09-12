@@ -7,15 +7,26 @@ import org.springframework.boot.test.context.SpringBootTest
 class FirstKotlinApplicationTests {
 	@Test
 	fun contextLoads() {
-		val set = mutableSetOf(100, 100)
-		set.add(200)
+		val oldMap = mutableMapOf<Int, String>()
+		oldMap.put(1, "STring")
+		oldMap[2] = "123"
 
-		for (i in set) {
-			println("${i}")
+		val newMap = mapOf(1 to "String", 2 to "String2")
+
+		for (mutableEntry in oldMap) {
+			println(mutableEntry.key)
+			println(mutableEntry.value)
+			println(oldMap.get(mutableEntry.key))
 		}
 
-		for ((idx, value) in set.withIndex()) {
-			println("${idx} ${value}")
+		for (key in newMap.keys) {
+			println(key)
+			println(newMap[key])
+		}
+
+		for ((key, value) in oldMap.entries) {
+			println(key)
+			println(value)
 		}
 	}
 
