@@ -7,18 +7,13 @@ import org.springframework.boot.test.context.SpringBootTest
 class FirstKotlinApplicationTests {
 	@Test
 	fun contextLoads() {
-		var emptyList: List<Int?>? = mutableListOf()
-		val emptyList2: List<Int?> = mutableListOf()
+		val str = "ABC"
+
+		println(str.lastChar())
 	}
 
-	private fun printNumbers(numbers: List<Int>) {
 
+	fun String.lastChar(): Char {
+		return this[this.length - 1]
 	}
-
-	fun printNameAndGender(vararg strings: String) {
-		for (string in strings) {
-			println(string)
-		}
-	}
-
 }
