@@ -7,7 +7,8 @@ import org.springframework.boot.test.context.SpringBootTest
 class FirstKotlinApplicationTests {
 	@Test
 	fun contextLoads() {
-		val set = setOf(100, 100)
+		val set = mutableSetOf(100, 100)
+		set.add(200)
 
 		for (i in set) {
 			println("${i}")
