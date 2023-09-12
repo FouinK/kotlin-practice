@@ -25,12 +25,9 @@ class FirstKotlinApplicationTests {
 			return person.name == "성현"
 		}
 
-		val isHyun: (Person) -> Boolean = {person: Person -> person.name == "현성"}
 
-		println(isSung(people[0]))
-		println(isHyun.invoke(people[6]))
-
-		val filterPerson = filterPerson(people, isSung)
+		filterPerson(people, {person -> person.name == "현성"})		//얘네 둘다 동일한거임
+		filterPerson(people) { person -> person.name == "현성" }		//얘네 둘다 동일한거임
 	}
 
 	private fun filterPerson(
