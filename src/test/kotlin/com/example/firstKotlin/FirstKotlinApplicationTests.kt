@@ -21,11 +21,11 @@ class FirstKotlinApplicationTests {
 			Person("현성", 10)
 		)
 
-		val isSung = fun(person: Person): Boolean {
+		val isSung: (Person) -> Boolean = fun(person: Person): Boolean {
 			return person.name == "성현"
 		}
 
-		val isHyun = {person: Person -> person.name == "현성"}
+		val isHyun: (Person) -> Boolean = {person: Person -> person.name == "현성"}
 
 		println(isSung(people[0]))
 		println(isHyun.invoke(people[6]))
