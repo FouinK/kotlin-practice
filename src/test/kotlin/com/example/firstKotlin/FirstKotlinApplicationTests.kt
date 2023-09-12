@@ -32,7 +32,8 @@ class FirstKotlinApplicationTests {
 
 	private fun filterPerson(
 		personList: List<Person>,
-		filter: (Person) -> Boolean): List<Person> {
+		filter: (Person) -> Boolean //여기서 타입 추론 가능하니까 위에서 : Person 안해줘도 됐던 것
+	): List<Person> {
 
 		val result = mutableListOf<Person>()
 		for (person in personList) {
