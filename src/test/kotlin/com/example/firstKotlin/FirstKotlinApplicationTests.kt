@@ -24,8 +24,7 @@ class FirstKotlinApplicationTests {
 			Fruit(1L, "노사과", 1000L, 2000L),
 		)
 
-		val groupBy: Map<String, List<Fruit>> = fruits.groupBy { fruit -> fruit.name }
-
+		val associateBy: Map<Long, Fruit> = fruits.associateBy { fruit -> fruit.id }
 	}
 
 	private fun filterFruits(
