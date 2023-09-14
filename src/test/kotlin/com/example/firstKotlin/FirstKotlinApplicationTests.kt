@@ -24,7 +24,8 @@ class FirstKotlinApplicationTests {
 			Fruit(1L, "노사과", 1000L, 2000L),
 		)
 
-		val groupBy: Map<String, List<Long>> = fruits.groupBy({ fruit -> fruit.name }, { fruit -> fruit.factoryPrice })
+		val filter: Map<String, List<Fruit>> = fruits.groupBy { fruit -> fruit.name }
+			.filter { (key, value) -> key == "사과" }
 
 	}
 
