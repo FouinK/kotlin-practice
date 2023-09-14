@@ -26,9 +26,8 @@ class FirstKotlinApplicationTests {
 			Fruit(1L, "노사과", 1000L, 2000L)
 		)
 
-		val map: List<Fruit> = fruits.filter { it.name == "사과" }
+		val map: List<Fruit> = fruits.distinctBy { fruit -> fruit.name }
 			.map { fruit -> fruit }
-
 	}
 
 	private fun filterFruits(
