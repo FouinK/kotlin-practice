@@ -8,24 +8,33 @@ class FirstKotlinApplicationTests {
 	@Test
 	fun contextLoads() {
 		val fruits = mutableListOf(
-			Fruit(1L, "사과", 1000L, 2000L),
-			Fruit(1L, "노사과", 3000L, 2000L),
-			Fruit(1L, "노사과", 3000L, 2000L),
-			Fruit(1L, "노사과", 3000L, 2000L),
-			Fruit(1L, "노사과", 3000L, 2000L),
-			Fruit(1L, "노사과", 3000L, 2000L),
-			Fruit(1L, "노사과", 3000L, 2000L),
-			Fruit(1L, "노사과", 3000L, 2000L),
-			Fruit(1L, "사과", 4000L, 2000L),
-			Fruit(1L, "사과", 4000L, 2000L),
-			Fruit(1L, "사과", 4000L, 2000L),
-			Fruit(1L, "사과", 4000L, 2000L),
-			Fruit(1L, "사과", 2000L, 2000L),
-			Fruit(1L, "노사과", 1000L, 2000L),
+			listOf(
+				Fruit(1L, "사과", 1000L, 2000L),
+				Fruit(1L, "노사과", 3000L, 2000L),
+				Fruit(1L, "노사과", 3000L, 2000L),
+				Fruit(1L, "노사과", 3000L, 2000L),
+				Fruit(1L, "노사과", 3000L, 2000L)
+			),
+			listOf(
+				Fruit(1L, "노사과", 3000L, 2000L),
+				Fruit(1L, "노사과", 3000L, 2000L),
+				Fruit(1L, "노사과", 3000L, 2000L),
+				Fruit(1L, "사과", 4000L, 2000L)
+			),
+			listOf(
+				Fruit(1L, "사과", 4000L, 2000L),
+				Fruit(1L, "사과", 4000L, 2000L),
+				Fruit(1L, "사과", 4000L, 2000L),
+				Fruit(1L, "사과", 2000L, 2000L),
+				Fruit(1L, "노사과", 1000L, 2000L),
+			)
 		)
 
-		val filter: Map<String, List<Fruit>> = fruits.groupBy { fruit -> fruit.name }
-			.filter { (key, value) -> key == "사과" }
+		val flatMap: List<Fruit> = fruits.flatMap { fruit ->
+			fruit
+				.filter { it.name == "사과" }
+		}
+
 
 	}
 
