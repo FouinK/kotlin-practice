@@ -8,7 +8,7 @@ class FirstKotlinApplicationTests {
 	@Test
 	fun contextLoads() {
 		val fruits = mutableListOf(
-			Fruit(1L, "사과", 1000L, 2000L),
+			null,
 			Fruit(1L, "사과", 1000L, 2000L),
 			Fruit(1L, "노사과", 3000L, 2000L),
 			Fruit(1L, "노사과", 3000L, 2000L),
@@ -23,13 +23,13 @@ class FirstKotlinApplicationTests {
 			Fruit(1L, "사과", 4000L, 2000L),
 			Fruit(1L, "사과", 2000L, 2000L),
 			Fruit(1L, "노사과", 1000L, 2000L),
-			Fruit(1L, "노사과", 1000L, 2000L)
+			null
 		)
 
-		val first = fruits.first()
-		val firstOrNull = fruits.firstOrNull()
-		val last = fruits.last()
-		val lastOrNull = fruits.lastOrNull()
+		println(fruits.first())
+		println(fruits.firstOrNull())
+		println(fruits.last())
+		println(fruits.lastOrNull())
 
 	}
 
