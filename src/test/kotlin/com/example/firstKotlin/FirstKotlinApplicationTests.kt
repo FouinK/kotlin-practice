@@ -7,44 +7,43 @@ import org.springframework.boot.test.context.SpringBootTest
 class FirstKotlinApplicationTests {
 	@Test
 	fun contextLoads() {
-		val people = mutableListOf(
-			Person("성현", 10),
-			Person("성현", 10),
-			Person("윤성현", 10),
-			Person("윤성현", 10),
-			Person("윤성현", 10),
-			Person("윤성현", 10),
-			Person("현성", 10),
-			Person("현성", 10),
-			Person("현성", 10),
-			Person("현성", 10),
-			Person("현성", 10)
+		val fruits = mutableListOf(
+			Fruit(1L, "사과", 1000L, 2000L),
+			Fruit(1L, "사과", 1000L, 2000L),
+			Fruit(1L, "노사과", 3000L, 2000L),
+			Fruit(1L, "노사과", 3000L, 2000L),
+			Fruit(1L, "노사과", 3000L, 2000L),
+			Fruit(1L, "노사과", 3000L, 2000L),
+			Fruit(1L, "노사과", 3000L, 2000L),
+			Fruit(1L, "노사과", 3000L, 2000L),
+			Fruit(1L, "노사과", 3000L, 2000L),
+			Fruit(1L, "사과", 4000L, 2000L),
+			Fruit(1L, "사과", 4000L, 2000L),
+			Fruit(1L, "사과", 4000L, 2000L),
+			Fruit(1L, "사과", 4000L, 2000L),
+			Fruit(1L, "사과", 2000L, 2000L),
+			Fruit(1L, "노사과", 1000L, 2000L),
+			Fruit(1L, "노사과", 1000L, 2000L)
 		)
 
-		val isSung: (Person) -> Boolean = fun(person: Person): Boolean {
-			return person.name == "성현"
-		}
+		val all = fruits.all { fruit -> fruit.name == "사과" }		//return Boolean
+		val none = fruits.none { fruit -> fruit.name == "사과" }		//return Boolean
 
-		println(filterPerson(people) { it.name == "현성" })
+
+
 	}
 
-	private fun filterPerson(
-		personList: List<Person>,
-		filter: (Person) -> Boolean //여기서 타입 추론 가능하니까 위에서 : Person 안해줘도 됐던 것
-	): List<Person> {
-
-		val result = mutableListOf<Person>()
-		for (person in personList) {
-			if (filter(person)) {
-				result.add(person)
-			}
-		}
-
-		return result
+	private fun filterFruits(
+		fruits: List<Fruit>, filter: (Fruit) -> Boolean
+	): List<Fruit> {
+		return fruits.filter(filter)
 	}
+
 }
 
-data class Person (
-	var name: String,
-	var age: Int,
+data class Fruit(
+	val id: Long,
+	val name: String,
+	val factoryPrice: Long,
+	val currentPrice: Long,
 )
