@@ -26,9 +26,8 @@ class FirstKotlinApplicationTests {
 			Fruit(1L, "노사과", 1000L, 2000L)
 		)
 
-		val all = fruits.any { fruit -> fruit.name == "사과" }		//return Boolean
-
-
+		val sortedBy: List<Fruit> = fruits.sortedBy { fruit -> fruit.currentPrice }
+		val sortedByDescending: List<Fruit> = fruits.sortedByDescending { fruit -> fruit.currentPrice }
 
 	}
 
