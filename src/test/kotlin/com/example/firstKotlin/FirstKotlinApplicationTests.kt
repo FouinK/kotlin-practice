@@ -26,8 +26,7 @@ class FirstKotlinApplicationTests {
 			Fruit(1L, "노사과", 1000L, 2000L)
 		)
 
-		val all = fruits.all { fruit -> fruit.name == "사과" }		//return Boolean
-		val none = fruits.none { fruit -> fruit.name == "사과" }		//return Boolean
+		val all = fruits.any { fruit -> fruit.name == "사과" }		//return Boolean
 
 
 
