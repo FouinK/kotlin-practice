@@ -35,6 +35,8 @@ class FirstKotlinApplicationTests {
 				.filter { it.name == "사과" }
 		}
 
+		fruits.flatten() //완전 평탄화
+
 
 	}
 
@@ -51,4 +53,8 @@ data class Fruit(
 	val name: String,
 	val factoryPrice: Long,
 	val currentPrice: Long,
-)
+) {
+	val isSamePrice: Boolean
+		get() = factoryPrice == currentPrice
+
+}
