@@ -26,8 +26,11 @@ class FirstKotlinApplicationTests {
 			Fruit(1L, "노사과", 1000L, 2000L)
 		)
 
-		val map: List<Fruit> = fruits.distinctBy { fruit -> fruit.name }
-			.map { fruit -> fruit }
+		val first = fruits.first()
+		val firstOrNull = fruits.firstOrNull()
+		val last = fruits.last()
+		val lastOrNull = fruits.lastOrNull()
+
 	}
 
 	private fun filterFruits(
