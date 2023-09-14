@@ -20,6 +20,6 @@ class FirstKotlinApplicationTests {
 }
 
 data class Person(
-	val name: String,
+	val name: String ,
 	val age: Int
 )
