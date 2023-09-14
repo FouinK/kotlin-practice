@@ -26,8 +26,8 @@ class FirstKotlinApplicationTests {
 			Fruit(1L, "노사과", 1000L, 2000L)
 		)
 
-		val sortedBy: List<Fruit> = fruits.sortedBy { fruit -> fruit.currentPrice }
-		val sortedByDescending: List<Fruit> = fruits.sortedByDescending { fruit -> fruit.currentPrice }
+		val map: List<Fruit> = fruits.filter { it.name == "사과" }
+			.map { fruit -> fruit }
 
 	}
 
