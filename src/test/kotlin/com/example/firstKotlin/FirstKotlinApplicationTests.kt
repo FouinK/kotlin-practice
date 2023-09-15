@@ -12,6 +12,14 @@ class FirstKotlinApplicationTests {
 		numbers.map { number -> number + 1 }
 			.forEach { number -> println(number)}
 
+		run {
+			numbers.forEach {number ->
+				if (number == 3) {
+					return@run
+				}
+				println(number)
+			}
+		}
 	}
 
 }
