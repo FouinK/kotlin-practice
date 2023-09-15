@@ -8,15 +8,14 @@ class FirstKotlinApplicationTests {
 	@Test
 	fun contextLoads() {
 
-		abc@ for (i in 1..100) {
-			for (j in 1..10) {
-				if (j == 2) {
-					break@abc
-				}
-				println("i = ${i}")
-				println("j = ${j}")
-			}
-		}
+	}
+
+	fun getNomberOrNull(number: Int): Int? {
+		return number.takeIf { it > 0 }
+	}
+
+	fun getNomberOrNullV2(number: Int): Int? {
+		return number.takeUnless { it > 0 }
 	}
 
 }
