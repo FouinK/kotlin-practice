@@ -7,19 +7,11 @@ import org.springframework.boot.test.context.SpringBootTest
 class FirstKotlinApplicationTests {
 	@Test
 	fun contextLoads() {
-		val person = Person("윤성현", 26)
-//		val (name, age) = person
-		val name = person.component1()
-		val age = person.component2()
 
-		println("name = ${name}")
-		println("age = ${age}")
+		val numbers = listOf(1, 2, 3)
+		numbers.map { number -> number + 1 }
+			.forEach { number -> println(number)}
 
 	}
 
 }
-
-data class Person(
-	val name: String ,
-	val age: Int
-)
