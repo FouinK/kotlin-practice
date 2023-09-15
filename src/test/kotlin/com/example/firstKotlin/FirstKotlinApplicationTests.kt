@@ -8,16 +8,13 @@ class FirstKotlinApplicationTests {
 	@Test
 	fun contextLoads() {
 
-		val numbers = listOf(1, 2, 3)
-		numbers.map { number -> number + 1 }
-			.forEach { number -> println(number)}
-
-		run {
-			numbers.forEach {number ->
-				if (number == 3) {
-					return@run
+		abc@ for (i in 1..100) {
+			for (j in 1..10) {
+				if (j == 2) {
+					break@abc
 				}
-				println(number)
+				println("i = ${i}")
+				println("j = ${j}")
 			}
 		}
 	}
